@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About Me – Rhys Alecksie Balansi</title>
+  <!-- Tailwind CDN  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root {
+      --bg: #F5F5F7;
+      --text: #0A0A0A;
+      --surface: #fff;
+      --divider: #e5e5ea;
+      --accent: #0071E3;
+      --gray: #888;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #18181A;
+        --text: #F5F5F7;
+        --surface: #232326;
+        --divider: #33343A;
+        --accent: #2997FF;
+        --gray: #aaa;
+      }
+    }
+    html { background: var(--bg); }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .glass {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px) saturate(1.2);
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 24px 0 rgba(10,10,10,0.04);
+    }
+    .divider {
+      border-top: 1px solid var(--divider);
+    }
+    .dot-bg {
+      background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1.5px);
+      background-size: 32px 32px;
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    a { color: var(--accent); transition: opacity .15s, text-decoration .15s; }
+    a:hover, a:focus-visible { opacity: .85; text-decoration: underline; }
+    .active-link { color: var(--accent); font-weight: 600; }
+    .nav-link { transition: color .15s, opacity .15s, text-decoration .15s; }
+    .nav-link:hover, .nav-link:focus-visible { opacity: .85; text-decoration: underline; }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 9999px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px 0 rgba(10,10,10,0.04);
+      transition: opacity .15s, transform .15s;
+      display: inline-block;
+    }
+    .btn:hover, .btn:focus-visible { opacity: .92; transform: scale(1.01); }
+    .pill {
+      background: var(--divider);
+      color: var(--gray);
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      padding: 0.25rem 1rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      display: inline-block;
+    }
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      z-index: 50;
+      transition: left 0.2s;
+    }
+    .skip-link:focus { left: 16px; outline: 2px solid #fff; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="sticky top-0 z-30 bg-[var(--bg)]/80 backdrop-blur border-b border-[var(--divider)]">
+    <nav class="max-w-3xl mx-auto flex items-center justify-between px-4 py-3" aria-label="Main navigation">
+      <span class="font-semibold text-lg tracking-tight text-[var(--text)]">Rhys Alecksie Balansi</span>
+      <ul class="flex gap-6 text-base">
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#timeline" class="nav-link" id="nav-timeline">Timeline</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="max-w-3xl mx-auto px-4 py-8">
+    <!-- Hero -->
+    <section class="dot-bg rounded-3xl mb-12 pt-12 pb-16 px-6 text-center fade-in" id="hero">
+      <div class="flex flex-col items-center gap-4">
+        <span class="pill mb-2">Puguis, Benguet</span>
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-[var(--text)]">Rhys Balansi</h1>
+        <p class="text-lg sm:text-xl text-[var(--gray)] font-medium">3rd year student at King’s College of the Philippines</p>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="mb-16 fade-in" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="sr-only">About</h2>
+      <div class="max-w-2xl mx-auto flex flex-col gap-6 text-lg leading-relaxed">
+        <p>I’m a 3rd year student at King’s College of the Philippines, focused on building solid fundamentals and real-world skills.</p>
+        <p>During the pandemic, I worked at the Trading Post, learning adaptability and responsibility under pressure.</p>
+        <p>These days, I drive part-time when my schedule allows—staying grounded and connected to my community.</p>
+      </div>
+    </section>
+    <!-- Timeline -->
+    <section id="timeline" class="mb-16 fade-in" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading" class="text-2xl font-semibold mb-8 text-[var(--text)] text-center">Timeline</h2>
+      <ol class="relative border-l-2 border-[var(--divider)] max-w-2xl mx-auto">
+        <li class="mb-10 ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[var(--surface)] border-2 border-[var(--accent)] rounded-full"></span>
+          <div>
+            <span class="font-semibold text-[var(--accent)]">2020–2022</span>
+            <span class="block text-base text-[var(--text)] font-medium">Trading Post</span>
+            <span class="block text-[var(--gray)] text-sm">Supported operations during the pandemic.</span>
+          </div>
+        </li>
+        <li class="mb-10 ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[var(--surface)] border-2 border-[var(--accent)] rounded-full"></span>
+          <div>
+            <span class="font-semibold text-[var(--accent)]">2022–Present</span>
+            <span class="block text-base text-[var(--text)] font-medium">King’s College of the Philippines</span>
+            <span class="block text-[var(--gray)] text-sm">3rd year student.</span>
+          </div>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[var(--surface)] border-2 border-[var(--accent)] rounded-full"></span>
+          <div>
+            <span class="font-semibold text-[var(--accent)]">2022–Present</span>
+            <span class="block text-base text-[var(--text)] font-medium">Part-time Driver</span>
+            <span class="block text-[var(--gray)] text-sm">Drives when schedule allows.</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="fade-in" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="text-2xl font-semibold mb-6 text-[var(--text)] text-center">Contact</h2>
+      <div class="glass max-w-md mx-auto p-8 flex flex-col items-center gap-5 shadow-lg rounded-3xl">
+        <p class="text-lg font-medium mb-2">Let’s connect.</p>
+        <a href="mailto:rhysalecsiebalansi@gmail.com" class="btn w-full text-center" aria-label="Email Rhys Alecksie Balansi">Email Me</a>
+        <!-- Social Links -->
+        <div class="flex gap-4 mt-2">
+          <a href="https://github.com/Rhys0310" aria-label="GitHub (TODO: add link)" class="text-[var(--accent)] text-2xl hover:opacity-80 focus-visible:underline">
+            <!-- GitHub SVG icon -->
+            <svg width="24" height="24" fill="none" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.18 9.18 0 0 1 12 6.84c.85.004 1.7.12 2.5.35 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+    <footer class="mt-16 text-center text-xs text-[var(--gray)] py-6">
+      © <span id="year"></span> Rhys Alecksie Balansi.
+    </footer>
+  </main>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Section fade-in on scroll (respects prefers-reduced-motion)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+    }
+
+    // Navbar active link indicator
+    const navLinks = {
+      about: document.getElementById('nav-about'),
+      timeline: document.getElementById('nav-timeline'),
+      contact: document.getElementById('nav-contact')
+    };
+    const sections = {
+      about: document.getElementById('about'),
+      timeline: document.getElementById('timeline'),
+      contact: document.getElementById('contact')
+    };
+    function setActive(section) {
+      Object.keys(navLinks).forEach(key => navLinks[key].classList.remove('active-link'));
+      if (navLinks[section]) navLinks[section].classList.add('active-link');
+    }
+    const sectionOrder = ['about', 'timeline', 'contact'];
+    window.addEventListener('scroll', () => {
+      let current = 'about';
+      const scrollY = window.scrollY + 120;
+      for (const key of sectionOrder) {
+        if (sections[key] && sections[key].offsetTop <= scrollY) current = key;
+      }
+      setActive(current);
+    });
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+      });
+  </script>
+</body>
+</html>

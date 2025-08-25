@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>I'm Back! – Rhys Alecksie Balansi</title>
+  <!-- Tailwind CDN for minimal, Apple-like styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light dark">
+  <style>
+    html { background: #F5F5F7; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    /* Custom focus for accessibility */
+    :focus-visible { outline: 2px solid #0071E3; outline-offset: 2px; }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center px-4 py-8 bg-[#F5F5F7]">
+  <main class="w-full max-w-md mx-auto flex flex-col items-center bg-white/80 rounded-3xl shadow-xl p-8 gap-8">
+    <section class="w-full flex flex-col items-center gap-4">
+      <h1 class="text-3xl sm:text-4xl font-bold text-[#0071E3] text-center">I'm Back!</h1>
+      <p class="text-base sm:text-lg text-center text-[#0A0A0A]">Hi! My name is Rhys Alecksie Balansi</p>
+      <!-- Profile image  -->
+      <div class="mt-2 mb-2 w-36 h-36 rounded-full shadow-md overflow-hidden flex items-center justify-center bg-[#ccc]">
+        <img
+          src="image/profile.jpg"  
+          alt="Profile photo of Rhys Alecksie Balansi"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </section>
+    <section class="w-full flex flex-col gap-4">
+      <h2 class="text-xl font-semibold text-[#0A0A0A] mt-2">Class Expectation</h2>
+      <p class="text-base text-[#222]">I expect to learn how to create websites in PHP.</p>
+      <h2 class="text-xl font-semibold text-[#0A0A0A] mt-4">Subject Expectations</h2>
+      <p class="text-base text-[#222]">I expect to learn how to create websites using PHP and understand the fundamentals of server-side programming.</p>
+      <h2 class="text-xl font-semibold text-[#0A0A0A] mt-4">Future PHP projects</h2>
+      <p class="text-base text-[#222]">I expect to develop a future PHP project where I can apply what I have learned by building a fully functional website that demonstrates dynamic content, user interaction, and database integration.</p>
+    </section>
+    <nav class="w-full flex justify-center mt-4">
+      <a href="about.html"
+         class="inline-block px-8 py-3 rounded-full bg-[#0071E3] text-white font-semibold shadow transition hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:outline-none text-base"
+         style="box-shadow: 0 2px 8px 0 rgba(10,10,10,0.04);"
+         >Learn More</a>
+    </nav>
+  </main>
+</body>
+</html>
